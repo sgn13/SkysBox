@@ -28,18 +28,17 @@ class nav extends Component {
     };
     render() {
         const { isAuthenticated, user } = this.props.auth;
-        
+
         const authLinks = (
             <Fragment>
-                <NavItem >
+                {/* <NavItem >
                     <span className="navbar-text mr-3">
                         <div class="strong">{user ? `Welcome, ${user.name}` : ''}</div>
                     </span>
+                </NavItem> */}
+                <NavItem>
+                    <Logout />
                 </NavItem>
-                <Button variant="outline-secondary" className="mr-sm-4">
-                    <NavItem>
-                        <Logout />
-                    </NavItem></Button>
             </Fragment>
         );
 
@@ -80,7 +79,7 @@ class nav extends Component {
                                         <NavLink to="/design" className="scroll-link">Design templates</NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/savedImg" className="scroll-link">Gallery</NavLink>
+                                        <NavLink to="/gallery" className="scroll-link">Gallery</NavLink>
                                     </li>
                                     <li>
                                         <NavLink to="/help" className="scroll-link">Help</NavLink>
@@ -91,8 +90,7 @@ class nav extends Component {
                                 </ul>
                             </div>
                             <div className="social">
-                                
-                                {isAuthenticated ? authLinks  : guestLinks}
+                                {isAuthenticated ? authLinks : guestLinks}
 
                             </div>
                         </div>

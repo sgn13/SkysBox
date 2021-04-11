@@ -90,7 +90,9 @@ ul {
 a {
   text-decoration: none;
 }
-
+/* img:not(.logo) {
+  width: 100%;
+} */
 img {
   display: block;
 }

@@ -2,11 +2,7 @@ import React, { Component } from "react";
 import Nav from "./components/header/nav";
 import "./Nav.css";
 import { BrowserRouter, Route } from "react-router-dom";
-import Login from "./components/social/login";
-import SignIn from "./components/social/signin";
-import Gallery from "./components/gallery";
 import Help from "./components/help";
-import Sidebar from "./components/sidebar";
 import Home from "./components/home";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Board from "./components/templates/board";
@@ -15,14 +11,18 @@ import { Provider } from "react-redux";
 import store from "./components/flux/store";
 import { loadUser } from "./components/flux/action/authAction";
 import FilterImage from "./components/filter/filter_image";
-import BannerCanva from "./components/canva/banner-canva";
 import ReactUploadImage from "./components/canva/UploadImage";
 import ImageContainer from "./components/canva/SavedImage";
 import admin from "./components/controller/admin";
-import delete1 from "./components/controller/delete";
 import deleteImg from "./components/controller/deletephoto";
+import delete1 from "./components/controller/delete";
+import RouterGuard from "./reactGuard";
+import Access from "./components/access";
 
 class App extends Component {
+  state = {
+    auth: false,
+  };
   componentDidMount() {
     store.dispatch(loadUser());
   }

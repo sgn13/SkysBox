@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import { useReactToPrint } from 'react-to-print';
-import CanvaNew from './canvaNew'
 import CanComponent from './canva_component';
 
 
