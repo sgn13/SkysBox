@@ -1,0 +1,49 @@
+.banner {
+  height: 40vh;
+  background: linear-gradient(rgba(53, 148, 140, 0.5), rgba(0, 0, 0, 0.7)),
+    url(../image/head.jpg) center/cover no-repeat;
+    background-color: red;
+}
+
+.banner {
+  min-height: 15vh;
+  
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.container h1 {
+  color: var(--clr-white);
+  text-transform: uppercase;
+}
+.container p {
+  color: var(--clr-white);
+  max-width: 25rem;
+  margin: 0 auto;
+  margin-bottom: 1.25rem;
+}
+
+
+.card img{
+height: 20rem;
+width: 20rem;
+border-radius: 10px;
+margin: 30px;
+}
+.card div:hover{
+/* transform: scale(1.1); */
+opacity: 0.8;
+cursor: pointer;
+transition: 0.5s ease;
+
+}
+.card h4{
+text-align: center;
+font-family: var(--ff-secondary);
+}
+.card{
+display:flex;
+justify-content: center;
+flex-wrap: wrap;
+flex-direction: row !important;
+}

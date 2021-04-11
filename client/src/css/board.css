@@ -1,0 +1,49 @@
+.main-board h3{
+    text-align: center;
+    padding: 30px;
+    font-family: rowdies;
+}
+.board{
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    margin-top: 200px;
+}
+.business-board{
+    height: 100px;
+    width: 200px;
+    border: 1px solid;
+    margin:50px;
+    position: relative;
+
+}
+.main-board a{
+    color: black;
+}
+.banner-board{
+    height: 200px;
+    width: 150px;
+    border: 1px solid;
+    position: relative;
+}
+.business-board p{
+    position: absolute;
+    top: 30%;
+    right: 30%;
+}
+.banner-board p{
+    position: absolute;
+    top: 40%;
+    right: 20%;
+
+}
+.business-board:hover{
+    cursor: pointer;
+    border: 1px solid grey;
+    box-shadow: 2px 2px 5px silver;
+}
+.banner-board:hover{
+    cursor: pointer;
+    border: 1px solid grey;
+    box-shadow: 2px 2px 5px #aaaaaa;
+}

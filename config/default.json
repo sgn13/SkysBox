@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://cardbox:9860405567@cluster0.qancv.mongodb.net/cardbox?retryWrites=true&w=majority",
+    "jwtSecret":"cardbox_secret"
+}

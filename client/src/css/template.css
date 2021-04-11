@@ -1,0 +1,68 @@
+.template_collection{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+
+.template1{
+    /* clip-path: polygon(50% 0%, 0% 100%, 65% 0); */
+    border: 1px solid silver;
+    width: 2.5in;
+    height: 1.5in;
+    z-index: 0;
+    position: relative;
+    margin: 20px;
+}
+
+.tem1{
+    clip-path: polygon(50% 0%, 0% 100%, 65% 0);
+    background-color: blue;  
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute   ;
+    /* cursor: pointer; */
+
+}
+.text{
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 2%;
+}
+.info{
+    float: right;
+    margin-top: 15%;
+    margin-right: 10%;
+    color: white;
+}
+
+.template1:hover{
+    border: 1px solid white;
+    cursor: pointer;
+}
+.template2:hover{
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.template2{
+    /* clip-path: polygon(50% 0%, 0% 100%, 65% 0); */
+    border: 1px solid silver;
+    width: 2.5in;
+    height: 1.5in;
+    z-index: 0;
+    position: relative;
+    margin: 20px;
+}
+.tem2{
+    clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+    background-color: rgb(38, 168, 114);  
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    cursor: pointer;
+
+}
