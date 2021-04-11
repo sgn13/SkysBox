@@ -130,6 +130,16 @@ class RegisterModal extends Component {
                   className="mb-3"
                   onChange={this.onChange}
                 />
+                <Label for="password">Confirm Password</Label>
+                <Input
+                  
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                  className="mb-3"
+                  
+                />
                 <Button color="dark" style={{ marginTop: '2rem' }} block>
                   Register
                   </Button>

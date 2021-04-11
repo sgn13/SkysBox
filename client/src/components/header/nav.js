@@ -80,13 +80,13 @@ class nav extends Component {
                                         <NavLink to="/design" className="scroll-link">Design templates</NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/gallery" className="scroll-link">Gallery</NavLink>
+                                        <NavLink to="/savedImg" className="scroll-link">Gallery</NavLink>
                                     </li>
                                     <li>
                                         <NavLink to="/help" className="scroll-link">Help</NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="//app.slack.com/client/TU8LY9ER2/CU1E7GULB" className="scroll-link">Slack</NavLink>
+                                        <NavLink to="/uploadImg" className="scroll-link">Upload</NavLink>
                                     </li>
                                 </ul>
                             </div>
