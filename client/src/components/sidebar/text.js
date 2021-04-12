@@ -72,7 +72,7 @@ class Text extends Component {
                     <option value="Teko">Teko</option>
 
                 </select>
-                <input type="range" min="0px" max="150px" style={{ marginTop: 'auto' }} onChange={this.props.fontsize}></input>
+                <input type="range" min="0px" max="1000px" style={{ marginTop: 'auto' }} onChange={this.props.fontsize}></input>
                 <input className="fileChoose" type="file" style={{ marginTop: "auto" }} onChange={this.props.imageUpload}></input>
                 <ColorPicker getTextColor={this.changeTextColor} />
                 {/* <Example /> */}

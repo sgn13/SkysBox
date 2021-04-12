@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Stage, Layer, Rect, Text, Circle, Line } from 'react-konva';
+// import { Stage, Layer, Rect, Text, Circle, Line } from 'react-konva';
 
 class Shapes extends Component {
     state = {}
     render() {
         return (<div>
             <h3>Choose your Shapes</h3>
-            <Stage width={window.innerWidth} height={window.innerHeight}>
+            {/* <Stage width={window.innerWidth} height={window.innerHeight}>
                 <Layer>
                     <Text text="Some text on canvas" fontSize={15} />
                     <Rect
@@ -31,7 +31,7 @@ class Shapes extends Component {
                         fillLinearGradientColorStops={[0, 'red', 1, 'yellow']}
                     />
                 </Layer>
-            </Stage>
+            </Stage> */}
 
         </div>);
     }
