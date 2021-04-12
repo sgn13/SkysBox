@@ -5,7 +5,6 @@ class Bodys extends Component {
     render() {
         return (<div>
             <Sidebar />
-
         </div>);
     }
 }

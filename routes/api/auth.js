@@ -73,5 +73,22 @@ router.get('/user',auth,(req,res)=>{
         .then(user => res.json(user))
 });
 
+router.get("/alluser", async (req, res) => 
+ {
+    try{
+    const user = await User.find();
+        console.log(user);
+        res.json(user);
+    }
+    catch(err){
+        return res.status(500).json('error');
+    }
+}
+);
 
+router.delete('/:id',(req,res)=>{
+    User.findById(req.params.id)
+        .then(User => User.remove().then(() => res.json({success :true})))
+        .catch(err => res.status(404).json({ success:false}))
+})
 module.exports = router;

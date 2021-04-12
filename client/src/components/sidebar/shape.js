@@ -4,9 +4,10 @@ import React, { Component } from 'react';
 class Shapes extends Component {
     state = {}
     render() {
-        return (<div>
-            <h3>Choose your Shapes</h3>
-            {/* <Stage width={window.innerWidth} height={window.innerHeight}>
+        return (
+            <div>
+                <h3>Choose your Shapes</h3>
+                {/* <Stage width={window.innerWidth} height={window.innerHeight}>
                 <Layer>
                     <Text text="Some text on canvas" fontSize={15} />
                     <Rect
@@ -32,8 +33,8 @@ class Shapes extends Component {
                     />
                 </Layer>
             </Stage> */}
-
-        </div>);
+            </div>
+        )
     }
 }
 

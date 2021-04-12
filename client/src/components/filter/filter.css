@@ -19,6 +19,8 @@ body{
 }
 .main-image img{
     max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .sidebar-filter{
     background-color: azure;
