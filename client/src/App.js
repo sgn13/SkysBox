@@ -18,6 +18,8 @@ import deleteImg from "./components/controller/deletephoto";
 import delete1 from "./components/controller/delete";
 import RouterGuard from "./reactGuard";
 import Access from "./components/access";
+import Admin from "./components/auth/Admin";
+import jwt from 'jwt-decode'
 
 class App extends Component {
   state = {
@@ -28,6 +30,7 @@ class App extends Component {
   }
 
   render() {
+
     return (
       <Provider store={store}>
         <BrowserRouter>
@@ -36,14 +39,14 @@ class App extends Component {
           <Route path="/help" component={Help} />
           <Route path="/filter/:id" component={FilterImage} />
           <Route path="/filter" exact component={FilterImage} />
-
           <Route path="/board" component={Board} />
           <Route path="/design" component={Body} />
           {/* <Route path='/banner' component={BannerCanva} /> */}
           <Route path="/" exact component={Home} />
           <Route path="/uploadImg" component={ReactUploadImage} />
           <Route path="/savedImg" component={ImageContainer} />
-          <Route path="/admin" component={admin} />
+          <Route path="/admin_panel" component={admin} />
+          <Route path="/admin" component={Admin} />
           <Route path="/delete/:id" component={delete1} />
           <Route path="/deleteImg/:id" component={deleteImg} />
         </BrowserRouter>

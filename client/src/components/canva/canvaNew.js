@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { exportComponentAsJPEG, exportComponentAsPNG } from "react-component-export-image";
 import { Ruler } from "../ruler";
 import Draggable from "react-draggable";
-import bgImage from '../../image/b1.png'
 const CanvaNew = React.forwardRef((props, ref) => {
     const { backgroundTemplate } = props
     const [select, setSelect] = useState(true)
@@ -51,7 +50,6 @@ const CanvaNew = React.forwardRef((props, ref) => {
         setShowRuler(true);
         setTargetNode({ left: x, top: y + node.offsetTop, height: node.clientHeight });
     }
-    console.log(backgroundTemplate.cardB1);
 
     return (
         <div className="canva-board" >
@@ -60,7 +58,7 @@ const CanvaNew = React.forwardRef((props, ref) => {
             {showRuler && <Ruler node={targetNode} />}
             <input type="file" onChange={handleImageUpload}></input>
 
-            <div ref={ref} id="can" style={{ width: width, backgroundColor: props.changeBack, backgroundImage: `url(${backgroundTemplate.cardB1})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover', height: height, border: '1px solid black', position: 'absolute', margin: '200px' }}>
+            <div ref={ref} id="can" style={{ width: width, backgroundColor: props.changeBack, backgroundImage: `url(${backgroundTemplate})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover', height: height, border: '1px solid black', position: 'absolute', margin: '200px' }}>
 
                 <div>
                     {
@@ -170,12 +168,12 @@ const MyComponent = (props) => {
         <React.Fragment>
             <CanvaNew {...props} ref={componentRef} />
             <button onClick={() => exportComponentAsJPEG(componentRef)} className="btn-download">
-                Export As JPEG
+                Download
             </button>
 
-            <button onClick={() => exportComponentAsPNG(componentRef)} className="btn-download">
+            {/* <button onClick={() => exportComponentAsPNG(componentRef)} className="btn-download">
                 Export As PNG
-            </button>
+            </button> */}
         </React.Fragment>);
 }
 

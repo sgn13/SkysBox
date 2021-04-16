@@ -4,19 +4,17 @@ import CanvaNew from "./canva/canvaNew";
 import Text from "./sidebar/text";
 import { Button, NavItem } from "react-bootstrap";
 import cardB1 from "../image/businessCard/cardB_1.jpg";
+import cardB2 from "../image/back2.jpg";
+import cardB3 from "../image/back3.jpg";
 import Shape from "./sidebar/shape";
 import { SketchPicker } from "react-color";
-// import { storage } from '../components/firebase/firebaseConfig'
 import { v4 as uuidv4 } from "uuid";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import LoginModal from "../components/auth/LoginModel";
 
-// import { Wrapper } from 'react-download-svg'
-
 class Sidebar extends Component {
   state = {
-    list: ["sagun", "shrestha", "thimi", "9852213"],
     color: "",
     backgroundImage: "",
     font: "",
@@ -59,7 +57,6 @@ class Sidebar extends Component {
   };
   handleSubmit = (e) => {
     e.preventDefault();
-
     const newItem = {
       id: this.state.id,
       title: this.state.item,
@@ -130,7 +127,6 @@ class Sidebar extends Component {
     this.setState({
       selectedColor: selectedItem,
     });
-    console.log(selectedItem);
     // this.setState({
     //     color: pick
     // })
@@ -262,7 +258,17 @@ class Sidebar extends Component {
                 <img
                   src={cardB1}
                   width="100%"
-                  onClick={() => this.setState({ backgroundImage: { cardB1 } })}
+                  onClick={() => this.setState({ backgroundImage: cardB1 })}
+                ></img><br />
+                <img
+                  src={cardB2}
+                  width="100%"
+                  onClick={() => this.setState({ backgroundImage: cardB2 })}
+                ></img><br />
+                <img
+                  src={cardB3}
+                  width="100%"
+                  onClick={() => this.setState({ backgroundImage: cardB3 })}
                 ></img>
               </div>
 
@@ -371,7 +377,7 @@ class Sidebar extends Component {
                 </Button>
                 <h3>Text</h3>
                 <h3>Select Fonts</h3>
-                <select onChange={this.setFont} id="font-selector">
+                <select onChange={this.setFont} id="font-selector" style={{ color: "grey" }}>
                   <option value="none">None</option>
                   <option value="sans-serif">Sans-serif</option>
                   <option value="Arial">Arial</option>
@@ -388,7 +394,7 @@ class Sidebar extends Component {
                   <option value="Teko">Teko</option>
                 </select>
                 {/* <input type="range" min="0" max="100"></input> */}
-                <select onChange={this.fontSize}>
+                <select onChange={this.fontSize} style={{ color: "grey" }}>
                   <option value="10px">10</option>
                   <option value="14px">14</option>
                   <option value="16px">16</option>
@@ -518,18 +524,18 @@ class Sidebar extends Component {
             />
           </div>
         ) : (
-          <div
-            className="login"
-            style={{ textAlign: "center", marginTop: "100px" }}
-          >
-            <h1> Please login to continue.....</h1>
-            <Button variant="outline-secondary" className="mr-sm-4">
-              <NavItem>
-                <LoginModal />
-              </NavItem>
-            </Button>
-          </div>
-        )}
+            <div
+              className="login"
+              style={{ textAlign: "center", marginTop: "100px" }}
+            >
+              <h1> Please login to continue.....</h1>
+              <Button variant="outline-secondary" className="mr-sm-4">
+                <NavItem>
+                  <LoginModal />
+                </NavItem>
+              </Button>
+            </div>
+          )}
       </div>
     );
   }

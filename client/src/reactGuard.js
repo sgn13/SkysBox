@@ -2,12 +2,12 @@ import React from 'react'
 import { Route, Redirect } from "react-router-dom";
 
 
-const RouterGuard = ({ component: Component, auth, ...rest }) => {
+const RouterGuard = ({ component: Component, auth, redirect = "/admin", ...rest }) => {
     return (
         <Route {...rest} render={(props) => (
             auth === true
-                ? <Component {...props} />
-                : <Redirect to='/access' />
+                ? <Redirect to={redirect} />
+                : <Component {...props} />
         )} />
     )
 }

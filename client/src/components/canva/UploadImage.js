@@ -46,22 +46,24 @@ class ReactUploadImage extends React.Component {
         console.log(this.props.payload);
         //console.log(this.props)
         return (
-            <div>
+            <div className="container mt-5">
                 {this.props.isAuthenticated ? (
                     <div className="Upload">
                         <form onSubmit={this.onFormSubmit}>
-                            <h1>File Upload</h1>
+                            <h2 className="my-3">File Upload</h2>
                             <input type="file" name="myImage" onChange={this.onChange} />
-                            <button type="submit">Upload</button>
+                            <Button variant="outline-secondary" type="submit" className="mr-sm-4">
+                                Upload
+                            </Button><br />
                         </form>
-                        <button onSubmit={this.onSubmit}>Show Your Cards</button>
+                        <Button variant="outline-secondary" onSubmit={this.onSubmit}>Show Your Cards</Button>
                     </div>
                 ) : (
                         <div
                             className="login"
                             style={{ textAlign: "center", marginTop: "100px" }}
                         >
-                            <h1> Please login to continue.....</h1>
+                            <h2> Please login to continue.....</h2>
                             <Button variant="outline-secondary" className="mr-sm-4">
                                 <NavItem>
                                     <LoginModal />

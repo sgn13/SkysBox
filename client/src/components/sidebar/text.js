@@ -55,7 +55,7 @@ class Text extends Component {
                     <div className="text-color-picker black" onClick={this.pickColor} id="black"></div>
                     <div className="text-color-picker white" onClick={this.pickColor} id="white"></div>
                 </div>
-                <select onChange={this.setFont} id="font-selector" >
+                {/* <select onChange={this.setFont} id="font-selector" >
                     <option value="none">None</option>
                     <option value="sans-serif">Sans-serif</option>
                     <option value="Arial">Arial</option>
@@ -71,7 +71,7 @@ class Text extends Component {
                     <option value="Rowdies">Rowdies</option>
                     <option value="Teko">Teko</option>
 
-                </select>
+                </select> */}
                 <input type="range" min="0px" max="1000px" style={{ marginTop: 'auto' }} onChange={this.props.fontsize}></input>
                 <input className="fileChoose" type="file" style={{ marginTop: "auto" }} onChange={this.props.imageUpload}></input>
                 <ColorPicker getTextColor={this.changeTextColor} />

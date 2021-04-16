@@ -15,7 +15,7 @@ function ColorPicker(props) {
 
     return (
         <div >
-            <button onClick={() => setShowPicker(showPicker => !showPicker)} className="toggleColor">{showPicker ? "Close color picker" : "Pick color"}</button>
+            <button onClick={() => setShowPicker(showPicker => !showPicker)} className="toggleColor">{showPicker ? "Close" : "Pick color"}</button>
             {showPicker ? <div >
                 <SketchPicker
                     color={color}
